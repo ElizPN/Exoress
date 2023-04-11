@@ -8,6 +8,8 @@ app.get("/", function (req, res) {
 
 app.get("/1/", function (req, res) {
   res.send("page 1");
+  console.log(req.path);
+  console.log(req.url);
 });
 
 app.get("/2/", function (req, res) {
