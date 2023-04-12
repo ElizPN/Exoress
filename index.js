@@ -1,6 +1,6 @@
 import express from "express";
 
-let app = express();
+const app = express();
 
 app.get("/", function (req, res) {
   res.send("helloo start page");
