@@ -1,5 +1,5 @@
 import express from "express";
-import __dirname from "./__dirname.js";
+import { __dirname } from "./__dirname.js";
 
 const app = express();
 
