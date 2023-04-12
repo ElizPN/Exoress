@@ -35,6 +35,11 @@ app.get("/4/", function (req, res) {
   res.redirect(303, "/");
 });
 
+app.get("/5/", (req, res) => {
+  res.type("application/json");
+  res.send({ name: "liza" });
+});
+
 //handle 404
 app.use((req, res) => {
   res.status(404).send("Not found");
