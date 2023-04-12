@@ -25,9 +25,14 @@ app.get("/2/", function (req, res) {
   res.status(403).send("page 2");
 });
 
-// redirect to start page
+// redirect to start page, default status 302
 app.get("/3/", function (req, res) {
   res.redirect("/");
+});
+
+// redirect to start page with status 303
+app.get("/4/", function (req, res) {
+  res.redirect(303, "/");
 });
 
 //handle 404
