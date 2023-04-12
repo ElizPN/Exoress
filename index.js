@@ -20,19 +20,20 @@ app.get("/1/", function (req, res) {
   console.log(req.ip);
 });
 
+//status 403
 app.get("/2/", function (req, res) {
-  res.send("page 2");
+  res.status(403).send("page 2");
 });
 
+// redirect to start page
 app.get("/3/", function (req, res) {
-  res.send("page 3");
+  res.redirect("/");
 });
 
 //handle 404
-app.use((req,res)=> {
-    res.status(404).send("Not found")
-
-})
+app.use((req, res) => {
+  res.status(404).send("Not found");
+});
 
 app.listen(3000, function () {
   console.log("runing");
