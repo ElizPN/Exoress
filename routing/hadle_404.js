@@ -4,7 +4,7 @@ const app = express();
 app.get("/test/:num", (req, res) => {
   let num = req.params.num;
 
-  if (num >= 1 && num <= 9) {
+  if (/\d+/.test(num)) {
     res.send("your num" + num);
   } else {
     res.status(404).send("page not found");
