@@ -1,10 +1,5 @@
 import express from "express";
 
-// app.get("/city/show/:id", function (req, res) {});
-// app.get("/city/edit/:id", function (req, res) {});
-// app.get("/country/list", function (req, res) {});
-// app.get("/country/show/:id", function (req, res) {});
-// app.get("/country/edit/:id", function (req, res) {});
 
 const app = express();
 
