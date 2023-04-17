@@ -19,7 +19,7 @@ app.get("/page/:page/", async (req, res) => {
 
   try {
     await fs.access(path, constants.F_OK);
-    res.render(req.params.page);
+    res.render(req.params.page, {text1: "aaaa", text2: "bbb", text3: "cccc"});
     // or you can use
     // res.sendFile(path);
   } catch (error) {
