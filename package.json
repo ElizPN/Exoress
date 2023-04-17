@@ -3,6 +3,7 @@
   "type": "module",
   "dependencies": {
     "express": "^4.17.1",
+    "express-handlebars": "^7.0.7",
     "lodash": "^4.17.21"
   }
 }
