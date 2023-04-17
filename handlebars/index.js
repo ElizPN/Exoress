@@ -20,6 +20,8 @@ app.get("/page/:page/", async (req, res) => {
   try {
     await fs.access(path, constants.F_OK);
     res.render(req.params.page);
+    // or you can use
+    // res.sendFile(path);
   } catch (error) {
     res.status(404).render("error");
   }
