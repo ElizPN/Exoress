@@ -24,7 +24,9 @@ app.get("/page/:page/", async (req, res) => {
     res.render(req.params.page, {
       text1: "aaaa",
       text2: "bbb",
-      text3: "../img.png",
+      text3: "../img.png", // this is a relative path to route that we created - /page/:page/. 
+      //So we even do not have this folders in our derictory. We just write this path relativ eroot derictory
+      // absolute path "/img.png"
     });
 
     // or you can use
@@ -39,3 +41,11 @@ app.use((req, res) => {
 });
 
 app.listen(3000);
+
+
+//  27 line explanation:
+//   ../img.png  -  this is a relative path to route that we created - /page/:page/. 
+// So we even do not have this folders in our derictory. We just write this routh and we have to remember that / in /page/:page/ means root 
+// derictory. Our root derictory is /views/ like we define 17 line.
+
+//  Absolute path will be "/img.png". / - it is root derictory (/views/), and img.png is in root derictory.
