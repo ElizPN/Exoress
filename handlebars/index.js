@@ -14,12 +14,19 @@ const app = express();
 app.engine("hbs", handlebars.engine);
 app.set("view engine", "hbs");
 
+app.use(express.static(__dirname + "/views/"));
+
 app.get("/page/:page/", async (req, res) => {
   const path = __dirname + "/views/" + req.params.page + ".hbs";
 
   try {
     await fs.access(path, constants.F_OK);
-    res.render(req.params.page, {text1: "aaaa", text2: "bbb", text3: "cccc"});
+    res.render(req.params.page, {
+      text1: "aaaa",
+      text2: "bbb",
+      text3: "../img.png",
+    });
+
     // or you can use
     // res.sendFile(path);
   } catch (error) {
