@@ -26,6 +26,7 @@ app.get("/page/:page/", async (req, res) => {
       text2: "https://www.youtube.com/watch?v=wlsX-PpVvGU",
       text3: "../img.png",
     });
+    
 
     // or you can use
     // res.sendFile(path);
