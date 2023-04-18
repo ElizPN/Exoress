@@ -24,9 +24,7 @@ app.get("/page/:page/", async (req, res) => {
     res.render(req.params.page, {
       text1: "aaaa",
       text2: "https://www.youtube.com/watch?v=wlsX-PpVvGU",
-      text3: "../img.png", // this is a relative path to route that we created - /page/:page/.
-      //So we even do not have this folders in our derictory. We just write this path relativ eroot derictory
-      // absolute path "/img.png"
+      text3: "../img.png",
     });
 
     // or you can use
